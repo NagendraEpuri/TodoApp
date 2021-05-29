@@ -78,4 +78,3 @@ app.route("/remove/:id").get((req, res) => {
     if (err) return res.send(500, err);
     res.redirect("/");
     });
-    });
