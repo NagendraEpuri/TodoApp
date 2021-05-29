@@ -22,10 +22,7 @@ app.listen(3000, () => console.log("Server Up and running"));
 
 //view engine configuration
 app.set("view engine", "ejs");
-//get method
-//app.get('/',(req, res) => {
-   // res.render('todo.ejs');
-   // });
+
 // GET METHOD
 app.get("/", (req, res) => {
     TodoTask.find({}, (err, tasks) => {
@@ -34,10 +31,6 @@ app.get("/", (req, res) => {
     });
 
 
-//post method
-//app.post('/',(req, res) => {
-   // console.log(req.body);
-//});
 
 //POST Method
 app.post('/',async (req, res) => {
@@ -52,7 +45,6 @@ app.post('/',async (req, res) => {
     res.redirect("/");
     }
 });
-//app.listen(3000, () => console.log("Server Up and running"));
 
 //UPDATE
 app
